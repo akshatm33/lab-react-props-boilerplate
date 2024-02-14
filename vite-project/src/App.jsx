@@ -1,17 +1,14 @@
-import './App.css';
-import elephant from "./images/elephant.jpeg";
-import imageData from './components/DataComponent';
-function App() {
-  // code here
+import React from "react";
+import "./App.css";
+import DataComponent from "./components/DataComponent";
 
-  const images=imageData.map((item)=>{
-    return <img  key={item.id} id={item.id} className="images" src={item.img}></img>
-  })
- return <>
-        <div className="h1Container"><h1>Kalvium gallary</h1></div>
-        <div className="imagesContainer">{images}</div>
-        </>
- 
+function App({ props }) {
+
+  return (
+    <div>
+      <img src={props.img} alt=""  />
+    </div>
+  );
 }
 
-export default App;
+export default App;
