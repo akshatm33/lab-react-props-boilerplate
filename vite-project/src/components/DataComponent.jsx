@@ -1,6 +1,6 @@
-import React from "react";
-import App from "../App";
-import elephant from "../images/elephant.jpeg";
+import React from 'react';
+import App from '../App'; 
+import elephant from '../images/elephant.jpeg';
 
 const DataComponent = () => {
   const imageData = [
@@ -24,10 +24,11 @@ const DataComponent = () => {
 
   return (
     <div className="box">
-      {imageData.map((element) => {
-        return <App key={element.id} {...element} />;
-      })}
+      {imageData.map((element) => (
+        <App key={element.id} props={element} /> 
+      ))}
     </div>
   );
 };
+
 export default DataComponent;
