@@ -20,6 +20,13 @@ const imageData = ()=>{
         img:elephant
       }
     ]
-    return data;
-  }
-  export default imageData()
+    return data (
+      <div className="box">
+      {imageData.map((element) => {
+        return <App key={element.id} props={element} />;
+      })}
+    </div>
+  );
+};
+
+export default imageData()
